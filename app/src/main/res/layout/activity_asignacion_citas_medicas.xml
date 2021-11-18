@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    android:padding="3dp"
+    tools:context=".AsignacionCitasMedicas">
+
+    <TextView
+        android:id="@+id/asigcitmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="70dp"
+        android:foregroundTint="#050505"
+        android:gravity="center"
+        android:text="Asignación de citas medicas "
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/medico"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/asigcitmed"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="5dp"
+        android:text="Médico"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textmed"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_below="@+id/medico"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+
+        android:layout_marginRight="52dp"
+        android:background="#FFFFFF"
+        android:drawableRight="@android:drawable/btn_dropdown"
+        android:drawablePadding="2dp" />
+
+    <TextView
+        android:id="@+id/modfh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textmed"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:text="Fecha y Hora"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/calendario"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_below="@+id/modfh"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="50dp"
+        android:background="#FBFBFB"
+        android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+        android:drawableRight="@drawable/ic_baseline_watch_later_24"
+        android:drawablePadding="8dp"
+        android:hint="10/08/2021           10:20 a.m"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="#716E6E" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/agendarbtn"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/calendario"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="118dp"
+        android:layout_marginLeft="118dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginRight="121dp"
+        android:layout_marginBottom="-134dp"
+        android:background="#3F51B5"
+        android:text=" Agendar Cita"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

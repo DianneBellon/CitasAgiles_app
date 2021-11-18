@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    tools:context=".CancelarCita">
+
+    <TextView
+        android:id="@+id/modcitmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="70dp"
+        android:foregroundTint="#050505"
+        android:gravity="center"
+        android:text="Cancelar cita médica "
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ultcitasig"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_below="@id/modcitmed"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="Ultima cita asignada"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:id="@+id/modfh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ultcitasig"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="5dp"
+        android:text="Fecha y Hora"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/calendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/modfh"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="#FBFBFB"
+        android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+        android:drawableRight="@drawable/ic_baseline_watch_later_24"
+        android:drawablePadding="8dp"
+        android:hint="10/08/2021           10:20 a.m"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#716E6E" />
+
+    <TextView
+        android:id="@+id/modmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendario"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="342dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="5dp"
+        android:text="Médico"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/medico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/modmed"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="#FBFBFB"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10dp"
+        android:hint="Nombre del Médico"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#716E6E" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ultbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/medico"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#037682"
+        android:text="CANCELAR CITA AGENDADA"
+        android:textSize="15sp" />
+
+
+
+</RelativeLayout>

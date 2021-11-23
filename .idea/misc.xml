@@ -3,20 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_asignacion_citas_medicas.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_cancelar_cita.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_cards_items.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_informacion_cita.xml" value="0.1" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_menuprincipal.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_modificar_cita.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_password.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_productos.xml" value="0.1" />
-        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_registro.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_registro.xml" value="0.25" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_snack_bar.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/custom_dialog.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/custom_dialog2.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/custom_dialog3.xml" value="0.1" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/custom_dialog4.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/fragment_actualizar_articulo.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/fragment_crear_articulo.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/fragment_ver_articulo.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/fragment_volver_inicio.xml" value="0.17255434782608695" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/layout/list_articulos.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/Lenovo/AndroidStudioProjects/proyecto_CitasAgiles/app/src/main/res/menu/menu.xml" value="0.1" />
       </map>
     </option>

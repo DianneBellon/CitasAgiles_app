@@ -2,11 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/registrar"
-        android:title="Registrarse" />
+        android:id="@+id/asinarcita"
+        android:title="Asignacion nueva cita medica " />
     <item
-        android:id="@+id/recuperarpass"
-        android:title="Recuperar contraseña" />
+        android:id="@+id/infocita"
+        android:title="Información de cita asignada" />
+    <item
+        android:id="@+id/modcita"
+        android:title="Modificar cita asignada" />
+    <item
+        android:id="@+id/cancita"
+        android:title="Cancelar cita asignada" />
     <item
         android:id="@+id/salir"
         android:title="Salir" />

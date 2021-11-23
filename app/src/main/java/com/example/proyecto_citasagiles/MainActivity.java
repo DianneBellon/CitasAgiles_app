@@ -2,44 +2,77 @@ package com.example.proyecto_citasagiles;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.proyecto_citasagiles.persistencia.DbUsuarios;
 import com.google.android.material.button.MaterialButton;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView singin;
-
-    //Dialog
-//     private Dialog dialog;
-//     private Button ShowDialog;
-
-
-
+    // Dialog
+    // private Dialog dialog;
+    // private Button ShowDialog;
+    EditText username, password;
+    Button loginbtn, btnRegis;
+    DbUsuarios DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        singin = findViewById(R.id.singin);
 
-        //Dialog
-//         ShowDialog = findViewById(R.id.loginbtn);
+        getSupportActionBar().hide(); // Eliminamos la barrar superior
 
-
-
-        TextView username = (TextView) findViewById(R.id.username);
-        TextView password = (TextView) findViewById(R.id.password);
-
-
+        username = findViewById(R.id.username);
+        password = findViewById(R.id.password);
         MaterialButton loginbtn = (MaterialButton) findViewById(R.id.loginbtn);
+        MaterialButton btnRegis = (MaterialButton) findViewById(R.id.btnRegis); // NEW
+
+        // Conetext = La clase en la que estamos ubicados ahora mismo
+        DB = new DbUsuarios(this);
+
+        loginbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String user = username.getText().toString();
+                String pass = password.getText().toString();
+
+                if (TextUtils.isEmpty(user) || TextUtils.isEmpty(pass))
+                    Toast.makeText(MainActivity.this, "Todos los espacios son requeridos", Toast.LENGTH_SHORT).show();
+                else {
+                    Boolean checkuserpass = DB.checkcontrasena(user, pass);
+                    if (checkuserpass == true) {
+                        Toast.makeText(MainActivity.this, "Login correcto", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), Registro.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(MainActivity.this, "Login incorrecto", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+        });
+
+        btnRegis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Registro.class);
+                startActivity(intent);
+            }
+        });
+    }
+
 //         Dialog dialog;
 //
 //         dialog = new Dialog(MainActivity.this);
@@ -95,43 +128,59 @@ public class MainActivity extends AppCompatActivity {
 //
 //            }
 //        });
+//    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu,menu);
+//        return true;
+//    }
+
+    //    @Override
+    //   public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+    //        int opt = item.getItemId();
+    //    float valor;
+
+//        switch(opt){
+//            case R.id.registrar:
+//                // Instanciamos nuestro objeto "cambiar"
+//                Intent cambiar = new Intent(MainActivity.this, Registro.class);
+//                startActivity(cambiar);
+//                return true;
+//            case R.id.recuperarpass:
+//                // Instanciamos nuestro objeto "cambiar"
+//                Intent cam = new Intent(MainActivity.this, Password.class);
+//                startActivity(cam);
+//                return true;
+//            case R.id.salir:
+//                finish();
+//                return true;
+//            default:
+//                return super.onOptionsItemSelected(item);
+
+//        }
+//    }
+
+    public void regis(View m){
+        // Instanciamos nuestro objeto "cambiar"
+        Intent cambiar = new Intent(MainActivity.this, Registro.class);
+        startActivity(cambiar);
+
+
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        int opt = item.getItemId();
-        float valor;
-
-        switch(opt){
-            case R.id.registrar:
-                // Instanciamos nuestro objeto "cambiar"
-                Intent cambiar = new Intent(MainActivity.this, Registro.class);
-                startActivity(cambiar);
-                return true;
-            case R.id.recuperarpass:
-                // Instanciamos nuestro objeto "cambiar"
-                Intent cam = new Intent(MainActivity.this, Password.class);
-                startActivity(cam);
-                return true;
-            case R.id.salir:
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-
-        }
-    }
-
     public void ingresar(View m){
         // Instanciamos nuestro objeto "cambiar"
-        Intent cambiar = new Intent(MainActivity.this, Productos.class);
+        Intent cambiar = new Intent(MainActivity.this, menuprincipal.class);
         startActivity(cambiar);
+
+
+    }
+    public void recu(View m){
+        // Instanciamos nuestro objeto "cambiar"
+        Intent cambiar = new Intent(MainActivity.this, Password.class);
+        startActivity(cambiar);
+
+
     }
 
 

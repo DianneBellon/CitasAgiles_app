@@ -31,6 +31,43 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp">
 
+
+        <!--caja 1-->
+        <com.google.android.material.textfield.TextInputLayout
+
+              style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Tipo de identificación"
+              android:textColor="@color/black"
+              android:textColorHint="#716E6E">-->
+
+              <com.google.android.material.textfield.TextInputEditText
+                 android:id="@+id/tipoid"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:inputType="text"
+                  android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--caja 2-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero de identificación"
+            android:textColor="@color/black"
+            android:textColorHint="#716E6E">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/numid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
         <!--caja 1-->
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -48,6 +85,23 @@
                 android:textColor="@color/black"/>
         </com.google.android.material.textfield.TextInputLayout>
         <!--caja 1-->
+
+        <!--caja 4-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo"
+            android:textColor="@color/black"
+            android:textColorHint="#716E6E"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/correo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/black"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <!--caja 2-->
         <com.google.android.material.textfield.TextInputLayout
@@ -85,22 +139,7 @@
         </com.google.android.material.textfield.TextInputLayout>
         <!--caja 3-->
 
-        <!--caja 4-->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Correo"
-            android:textColor="@color/black"
-            android:textColorHint="#716E6E"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/correo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:textColor="@color/black"/>
-        </com.google.android.material.textfield.TextInputLayout>
 
     <!--    <LinearLayout
             android:layout_width="match_parent"

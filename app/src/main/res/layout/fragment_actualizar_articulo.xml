@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="40dp"
+    android:background="@drawable/background"
     tools:context=".CrearArticulo">
 
     <!--Primer TextFile-->
@@ -13,11 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Nombre">
+        android:hint="Nombre del médico">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tfNombre"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="8dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:id="@+id/tfNombre"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--Segundo TextFile-->
@@ -26,11 +30,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Descripción">
+        android:hint="Fecha">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tfDescripcion"
+            android:id="@+id/tfFecha"
+            android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+            android:drawablePadding="8dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
     <!--Tercer TextFile-->
     <com.google.android.material.textfield.TextInputLayout
@@ -38,11 +45,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Precio">
+        android:hint="Hora">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tfPrecio"
+            android:drawableLeft="@drawable/ic_baseline_watch_later_24"
+            android:drawablePadding="8dp"
+            android:id="@+id/tfHora"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -51,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Actualizar Articulo"/>
+        android:text="ACTUALIZAR CITA"/>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"

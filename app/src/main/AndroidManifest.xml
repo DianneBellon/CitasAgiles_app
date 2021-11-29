@@ -55,6 +55,13 @@
         <activity
             android:name=".ModificarCita"
             android:exported="true"/>
+        <activity
+            android:name=".menuprincipal"
+            android:exported="true"/>
+
+        <activity
+            android:name=".CardsItems"
+            android:exported="true"/>
 
 
     </application>

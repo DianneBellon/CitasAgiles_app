@@ -1,30 +1,29 @@
 package com.example.proyecto_citasagiles;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.proyecto_citasagiles.persistencia.DbUsuarios;
 import com.google.android.material.button.MaterialButton;
 
+// Importar: Indica llamar las clases y archivos
+// Extender: Indica usar la clase principal en las clases scundarias
 
 public class MainActivity extends AppCompatActivity {
-
     // Dialog
     // private Dialog dialog;
     // private Button ShowDialog;
     EditText username, password;
-    Button loginbtn, btnRegis;
+    Button loginbtn, btnRegis; // Declaramos de forma global nuestra variable Button
     DbUsuarios DB;
 
     @Override
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String user = username.getText().toString();
+                String user = username.getText().toString(); // Tomar los datos que agregó el usuario
                 String pass = password.getText().toString();
 
                 if (TextUtils.isEmpty(user) || TextUtils.isEmpty(pass))
@@ -53,9 +52,14 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     Boolean checkuserpass = DB.checkcontrasena(user, pass);
                     if (checkuserpass == true) {
-                        Toast.makeText(MainActivity.this, "Login correcto", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), Registro.class);
-                        startActivity(intent);
+                        // Toast.makeText(MainActivity.this, "Login correcto", Toast.LENGTH_SHORT).show();
+                        Dialogo d = new Dialogo(MainActivity.this,"¿Está seguro que desea ingresar?","Citas Ágiles", new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent intent = new Intent(getApplicationContext(), menuprincipal.class);
+                                startActivity(intent);
+                            }
+                        });
                     } else {
                         Toast.makeText(MainActivity.this, "Login incorrecto", Toast.LENGTH_SHORT).show();
                     }
@@ -67,11 +71,15 @@ public class MainActivity extends AppCompatActivity {
         btnRegis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Cambiamos de layout/Vista
                 Intent intent = new Intent(getApplicationContext(), Registro.class);
                 startActivity(intent);
             }
         });
     }
+
+
+
 
 //         Dialog dialog;
 //

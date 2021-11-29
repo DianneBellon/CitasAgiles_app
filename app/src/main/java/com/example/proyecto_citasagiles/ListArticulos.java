@@ -2,21 +2,26 @@ package com.example.proyecto_citasagiles;
 
 public class ListArticulos {
 
+
     private int codigo;
     private String nombre;
-    private String descripcion;
-    private float precio;
+    private String fecha;
+    private String hora;
 
 
     // Construtor
-    public ListArticulos(int codigo, String nombre, String descripcion, float precio) {
+
+    public ListArticulos(int codigo, String nombre, String fecha, String hora) {
         this.codigo = codigo;
         this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.precio = precio;
+        this.fecha = fecha;
+        this.hora = hora;
+
     }
 
-    public int getCodigo() { return codigo; }
+    public int getCodigo() {
+        return codigo;
+    }
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
@@ -30,19 +35,19 @@ public class ListArticulos {
         this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
-    public float getPrecio() {
-        return precio;
+    public String getHora() {
+        return hora;
     }
 
-    public void setPrecio(float precio) {
-        this.precio = precio;
+    public void setHora(String hora) {
+        this.hora = hora;
     }
 }

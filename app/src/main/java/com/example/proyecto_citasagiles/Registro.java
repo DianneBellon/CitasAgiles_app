@@ -14,9 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.proyecto_citasagiles.persistencia.DbUsuarios;
 
 
-
 public class Registro extends AppCompatActivity {
-    EditText username1, password1, repassword, correo;
+    EditText tipoid, numid, username1, password1, repassword, correo;
     Button btnRegistro, volverSingin; // Variable Global
     DbUsuarios DB;
 
@@ -26,6 +25,8 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
+        tipoid = findViewById(R.id.tipoid);
+        numid = findViewById(R.id.numid);
         username1 = findViewById(R.id.username1);
         password1 = findViewById(R.id.password1);
         repassword = findViewById(R.id.repassword);
@@ -33,23 +34,26 @@ public class Registro extends AppCompatActivity {
 
         btnRegistro = findViewById(R.id.btnRegistro);
         volverSingin = findViewById(R.id.volverSingin);
+        DB = new DbUsuarios(this);
 
 
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String tdoc = tipoid.getText().toString();
+                String ndoc = numid.getText().toString();
                 String user = username1.getText().toString();
                 String pass = password1.getText().toString();
                 String repass = repassword.getText().toString();
                 String email = correo.getText().toString();
 
-                if(TextUtils.isEmpty(user) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(repass) || TextUtils.isEmpty(email))
+                if(TextUtils.isEmpty(tdoc) || TextUtils.isEmpty(ndoc) || TextUtils.isEmpty(user) || TextUtils.isEmpty(pass) || TextUtils.isEmpty(repass) || TextUtils.isEmpty(email))
                     Toast.makeText(Registro.this, "Se requiere llenar los campos", Toast.LENGTH_SHORT).show();
                 else
                 if(pass.equals(repass)){
                     Boolean checkuser = DB.checknomusuario(user);
                     if(checkuser == false){
-                        Boolean insert = DB.insertarUsuario(user, pass);
+                        Boolean insert = DB.insertarUsuario(tdoc, ndoc, user, email, pass);
                         if(insert ==true){
                             Toast.makeText(Registro.this, "Registrado correctamente", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);

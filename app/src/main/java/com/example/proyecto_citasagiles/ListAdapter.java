@@ -13,18 +13,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
+public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>{
+    // implements View.OnClickListener
     // ViewHolder = Describe una vista de un elemento(CARD)y matadatos sobre su lugar dentro de RecyclerView
+    // Para generar ese evento manual
+    // private View.OnClickListener Listener;
     private List<ListElement> mData;
     private LayoutInflater mInflater; // Inflater = Describe de que archivo proviene o que tipo de dato es
-    private Context context; // Context Nos indica de que clase estamos llamando al Adapter
+    private Context context; // Context Nos indica de que clase estamos llamando al Adapter = ListAdapter
 
     // Contructor
     public ListAdapter(List<ListElement> itemList, Context context){
-        this.mData = itemList;
-        // LayoutInflater = Se usa para crear instancias del contenido de los archivos XML
         this.mInflater = LayoutInflater.from(context);
+        // LayoutInflater = Se usa para crear instancias del contenido de los archivos XML
         this.context = context;
+        this.mData = itemList;
     }
 
     @Override
@@ -35,8 +38,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     @Override
     public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
-        View view = mInflater.inflate(R.layout.list_element, null);
+        View view = mInflater.inflate(R.layout.list_element, parent, false);
         return new ListAdapter.ViewHolder(view);
+
+        //view.setOnClickListener(this);
+
     }
 
     @Override
@@ -53,8 +59,19 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
         mData = items;
     }
+
+    //public void setOnClickListener(View.OnClickListener listener){
+    //this.listener=listener;
+    //}
+
+//    @Override
+//    public void onClick(View view) {
+//
+//    }
+
     // ViewHolder = Describe una vista de un elemento(CARD)y matadatos sobre su lugar dentro de RecyclerView
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    // Sub Clase
+    public class ViewHolder extends RecyclerView.ViewHolder{ //Subclase
         ImageView iconImage;
         TextView name, country, status;
 
@@ -66,7 +83,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             country = itemView.findViewById(R.id.countryView);
             status = itemView.findViewById(R.id.statusTextView);
         }
-
+        // GET = Obtener
+        // SET = Modificar
         void bindData(final ListElement item){
             iconImage.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
             // PorterDuff =  Describe la forma de combinar imagenes.
@@ -77,6 +95,3 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         }
     }
 }
-
-
-

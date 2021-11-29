@@ -1,21 +1,16 @@
 package com.example.proyecto_citasagiles.persistencia;
 
+
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
 import androidx.annotation.Nullable;
 
 public class DbUsuarios extends DbHelper{
 
     Context context; // Variable global
-
-    // CRUD
-    // C = CREAR
-    // R = LEER
-    // U = ACTUALIZAR
-    // D = ELIMINAR
 
     // Constructor
     public DbUsuarios(@Nullable Context context) {
@@ -28,23 +23,26 @@ public class DbUsuarios extends DbHelper{
 
 
     // NEW
-    public Boolean insertarUsuario(String nomusuario, String contrasena){
+    public Boolean insertarUsuario(String tipodoc, String numdoc , String nomusuario, String correo, String contrasena){
         DbHelper dbHelper = new DbHelper(context); // Intancia del objeto DbHleper = nuestra base de datos
         SQLiteDatabase db = dbHelper.getWritableDatabase(); // Agregamos los datos
 
         ContentValues values = new ContentValues(); // Instancia del objeto values
+        values.put("tipodoc", tipodoc);
+        values.put("numdoc", numdoc);
         values.put("nomusuario", nomusuario);
+        values.put("correo", correo);
         values.put("contrasena", contrasena);
 
+
         long result = db.insert(TABLE_USERS, null, values);
-        if (result == -1)
-            return false;
+        if (result == -1) return false;
         else
             return true;
 
     }
 
-    public Boolean checknomusuario(String nomusuario){
+    public Boolean checknomusuario(String nomusuario){ //esta es ka qye esta llegando null
         DbHelper dbHelper = new DbHelper(context); // Instancia del objeto DbHelper
         SQLiteDatabase db = dbHelper.getWritableDatabase(); //
         // Colección de filas que son aleatorias
@@ -55,10 +53,10 @@ public class DbUsuarios extends DbHelper{
             return false;
     }
 
-    public Boolean checkcontrasena(String nomusuario, String contrasena){
-        DbHelper dbHelper = new DbHelper(context);
+    public Boolean checkcontrasena(String correo, String contrasena){
+        DbHelper dbHelper = new DbHelper(context); // Instaciamos nuestra conexión
         SQLiteDatabase db = dbHelper.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM usuarios WHERE nomusuario =? and contrasena=?", new String[] {nomusuario, contrasena});
+        Cursor cursor = db.rawQuery("SELECT * FROM usuarios WHERE correo =? and contrasena=?", new String[] {correo, contrasena});
         if(cursor.getCount()>0)
             return true;
         else

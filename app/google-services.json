@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "49727890183",
+    "project_id": "citasagilesapp",
+    "storage_bucket": "citasagilesapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49727890183:android:cde7c1f1bc6ffd461c5ba2",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_citasagiles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49727890183-rdea29erllpmahs6tqavbeo15avqu7mj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyecto_citasagiles",
+            "certificate_hash": "cac1aa05e9a49930691c6ee81d1002e806ce9e1b"
+          }
+        },
+        {
+          "client_id": "49727890183-8audiolril4v4qt85rf83sgjds89209d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ2_glavOgqoQegJXQvpQk4xCwTg8SAp0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49727890183-8audiolril4v4qt85rf83sgjds89209d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
